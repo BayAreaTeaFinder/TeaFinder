@@ -16,6 +16,10 @@ $(document).ready(function() {
 		$("#sidebar").fadeIn(100);
 		$("#sidebar").animate({right:'+=25%'}, 300);
 	});
+	$("#searchbar").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#searchbar").click();
+    }});
 	$("#Submit-Tea-Shop").click(function() {
 		$(".input-group-children").children().fadeTo(500, 0.1);
 		$(".Tea-Shop-Submit").fadeToggle(500);
