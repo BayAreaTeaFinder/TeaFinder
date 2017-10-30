@@ -126,6 +126,7 @@ google.maps.event.addListener(marker,'click', (function(marker,content,infowindo
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == 'OK') {
         map.setCenter(results[0].geometry.location);
+        map.setZoom(15);
       } else {
         alert('Address not found');
       }
