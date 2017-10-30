@@ -8,6 +8,11 @@ $(document).ready(function() {
 	fillMainTable(Top100);
 	$("div").fadeIn(1000);
 	$(".content-wrapper-add").hide();
+	$('input:text').focus(
+    function(){
+        $(this).val('');
+        sendNew();
+    });
 	$("#close").click(function() {
 		$("#sidebar").animate({right:'-=25%'}, 300);
 		$("#sidebar").fadeOut(100);
