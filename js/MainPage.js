@@ -8,15 +8,14 @@ $(document).ready(function() {
 	fillMainTable(Top100);
 	$("div").fadeIn(1000);
 	$(".content-wrapper-add").hide();
-	$('input:text').focus(
-    function(){
+	$('input:text').click(function() {
         $(this).val('');
-        sendNew();
     });
-    $("input:text").keyup(function(event) {
-    if (event.keyCode === 13) {
-        $(this).click();
-    }});
+    $("#searchbar").keyup(function(event) {
+    	if (event.keyCode === 13) {
+        	$(".input-group button").click();
+	    }
+	});
 	$("#close").click(function() {
 		$("#sidebar").animate({right:'-=25%'}, 300);
 		$("#sidebar").fadeOut(100);
